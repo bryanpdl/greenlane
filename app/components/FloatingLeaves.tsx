@@ -16,7 +16,7 @@ const FloatingLeaf = ({ size, initialX, initialY, duration }: {
       initial={{ x: `${initialX}vw`, y: initialY, opacity: 0 }}
       animate={{
         y: [initialY, initialY - 2000],
-        opacity: [0, 0.45, 0],
+        opacity: [0, 0.55, 0],
         rotate: [0, 720],
       }}
       transition={{

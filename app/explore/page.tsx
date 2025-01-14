@@ -107,7 +107,8 @@ export default function ExplorePage() {
                   key={shop.id}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="bg-white/5 rounded-xl overflow-hidden hover:bg-white/10 transition-colors group"
+                  onClick={() => window.location.href = `/shops/${shop.id}`}
+                  className="bg-white/5 rounded-xl overflow-hidden hover:bg-white/10 transition-colors group cursor-pointer"
                 >
                   <div className="relative h-48 overflow-hidden">
                     <img
@@ -136,13 +137,6 @@ export default function ExplorePage() {
                     <p className="text-gray-400 text-sm line-clamp-2">
                       {shop.description}
                     </p>
-
-                    <button 
-                      onClick={() => window.location.href = `/shops/${shop.id}`}
-                      className="w-full px-4 py-2.5 bg-green-accent text-black rounded-xl font-medium hover:bg-opacity-90 transition-colors"
-                    >
-                      View Shop
-                    </button>
                   </div>
                 </motion.div>
               ))}
